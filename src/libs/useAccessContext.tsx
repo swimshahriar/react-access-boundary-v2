@@ -17,7 +17,13 @@ const AccessContext = React.createContext<AccessContextType>(defaultValue);
  * It should receive the users permissions as parameter
  */
 export const AccessProvider: React.FC<React.PropsWithChildren<AccessProviderProps>> = ({ permissions, children }) => {
-	const isAllowedTo = (permission: Permission) => permissions.includes(permission);
+	const isAllowedTo = (permission: Permission | Permission[]) => {
+		if (Array.isArray(permission)) {
+			return permissions.some((perm) => permission.includes(perm));
+		}
+
+		return permissions.includes(permission);
+	};
 
 	return <AccessContext.Provider value={{ isAllowedTo }}>{children}</AccessContext.Provider>;
 };

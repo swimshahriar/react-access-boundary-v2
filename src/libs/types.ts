@@ -3,7 +3,7 @@ import React from 'react';
 export type Permission = string;
 
 export type AccessContextType = {
-	isAllowedTo: (permission: Permission) => boolean;
+	isAllowedTo: (permission: Permission | Permission[]) => boolean;
 };
 
 export type AccessProviderProps = {
@@ -12,7 +12,7 @@ export type AccessProviderProps = {
 };
 
 export type AccessBoundaryProps = {
-	to: Permission;
+	to: Permission | Permission[];
 	isDefaultFallback?: boolean;
 	fallback?: React.ReactNode;
 };
