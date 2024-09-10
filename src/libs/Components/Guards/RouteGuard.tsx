@@ -1,18 +1,19 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import AccessBoundary from '../..';
+import { Operation } from '../../types';
 
 interface RouteGuardProps {
 	permissions?: string[];
-	children: ReactNode;
+	operation?: Operation;
 }
 
-export const RouteGuard = ({ permissions, children }: RouteGuardProps) => {
+export const RouteGuard = ({ permissions, operation, children }: React.PropsWithChildren<RouteGuardProps>) => {
 	if (!permissions || !permissions.length) {
 		return children;
 	}
 
 	return (
-		<AccessBoundary to={permissions} isDefaultFallback>
+		<AccessBoundary to={permissions} operation={operation} isDefaultFallback>
 			{children}
 		</AccessBoundary>
 	);
