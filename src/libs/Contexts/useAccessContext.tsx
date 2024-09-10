@@ -1,5 +1,5 @@
 import React, { useContext, createContext } from 'react';
-import { AccessContextType, AccessProviderProps, Permission } from './types';
+import { AccessContextType, AccessProviderProps, Permission } from '../types';
 
 const initialState = {
 	isAllowedTo: () => false,
