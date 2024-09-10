@@ -122,13 +122,32 @@ Similarly, the `AccessBoundary` component supports the `AND` operation for permi
 </AccessBoundary>
 ```
 
-## Can I contribute?
-
-Absolutely! Open an issue to point out any errors or suggest improvements. If you'd like to fix something yourself, you're welcome to open a PR, and it will be much appreciated.
-
 ## Credit
 
 This package is inspired by the `react-access-boundary` [package](https://www.npmjs.com/package/react-access-boundary).
+
+### Migration from `react-access-boundary` to `react-access-boundary-v2`
+
+Migrating from `react-access-boundary` to `react-access-boundary-v2` is seamless and won't introduce breaking changes. The core functionality remains the same, ensuring your existing permission-based access controls continue to work as expected.
+
+#### Key points:
+
+- **No Breaking Changes**: You can upgrade without needing to refactor existing components or logic.
+- **Enhanced Features**: `react-access-boundary-v2` introduces new features like the `RouteGuard` component and support for `AND/OR` permission logic, giving you more flexibility without altering current behavior.
+
+To migrate, simply install the new package:
+
+```bash
+yarn add react-access-boundary-v2
+# or
+npm i react-access-boundary-v2
+```
+
+And you're good to go! No further changes are necessary for your existing code.
+
+## Can I contribute?
+
+Absolutely! Open an issue to point out any errors or suggest improvements. If you'd like to fix something yourself, you're welcome to open a PR, and it will be much appreciated.
 
 ## License
 
