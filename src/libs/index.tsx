@@ -3,7 +3,7 @@ import { AccessFallback } from './Components/AccessFallback';
 import { AccessBoundaryProps } from './types';
 import { useAccessContext } from './Contexts/useAccessContext';
 
-const AccessBoundary = ({ to, operation, children, isDefaultFallback = true, fallback }: React.PropsWithChildren<AccessBoundaryProps>) => {
+const AccessBoundary = ({ to, operation, children, isDefaultFallback, fallback }: React.PropsWithChildren<AccessBoundaryProps>) => {
 	const { isAllowedTo } = useAccessContext();
 
 	if (isAllowedTo(to, operation)) {
