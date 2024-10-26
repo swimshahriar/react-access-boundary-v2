@@ -13,6 +13,10 @@ A lightweight React utility for managing access control by checking user permiss
 
 [![version][version-badge]][package] [![MIT License][license-badge]][license]
 
+## Support
+
+<a href="https://www.buymeacoffee.com/swimshahriar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ## Quick Start
 
 1. **Installation**: It should be installed in your React project's `dependencies` by running either of the following:
